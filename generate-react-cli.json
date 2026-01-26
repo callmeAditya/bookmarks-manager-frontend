@@ -1,0 +1,49 @@
+{
+  "usesTypeScript": false,
+  "usesJavaScript": true,
+  "usesCssModule": true,
+  "usesStyledComponents": true,
+  "testLibrary": "None",
+  "cssPreprocessor": "scss",
+  "component": {
+    "mui-component": {
+      "customTemplates": {
+        "component": "src/templates/mui-component/index.js",
+        "style": "src/templates/mui-component/TemplateName.style.js",
+        "scss": "src/templates/mui-component/TemplateName.scss",
+        "test": "src/templates/mui-component/TemplateName.test.js"
+      },
+      "path": "src/Components",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": false,
+      "withLazy": false,
+      "withScss": true
+    },
+    "mui-page": {
+      "customTemplates": {
+        "component": "src/templates/mui-page/index.js",
+        "style": "src/templates/mui-page/TemplateName.style.js",
+        "scss": "src/templates/mui-page/TemplateName.scss",
+        "test": "src/templates/mui-page/TemplateName.test.js"
+      },
+      "path": "src/Pages",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": false,
+      "withLazy": false,
+      "withScss": true
+    },
+
+
+
+
+    "default": {
+      "path": "src/Components",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": true,
+      "withLazy": false
+    }
+  }
+}

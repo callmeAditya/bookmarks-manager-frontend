@@ -1,0 +1,9 @@
+import { makeStyles } from "@mui/styles";
+
+const useStyles = makeStyles((theme) => ({
+    CustomFormSelectCheckbox: {
+        // Add your styles here
+    },
+}));
+
+export default useStyles;
