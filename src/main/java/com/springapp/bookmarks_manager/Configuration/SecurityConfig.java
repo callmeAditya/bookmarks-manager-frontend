@@ -68,7 +68,6 @@ public class SecurityConfig {
 	}
 
     
- // Define the CORS policy used above
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration cfg = new CorsConfiguration();
