@@ -3,14 +3,15 @@ import axios from "axios";
 const makeRequest = async(path, obj={}, options={}) => {
         
     const accessToken = sessionStorage.getItem("user");
-    if(accessToken) {
-        obj['Authorization'] = `Bearer ${accessToken}`
+    if(accessToken && accessToken!==undefined) {      
+        console.log(sessionStorage);
+          
+        obj['header']['Authorization'] = `Bearer ${accessToken}`
     }
     console.log(obj);
     
     return await axios({
         url: path,
-        withCredentials: false,
         method: obj?.method,
         ...obj,
         timeout:30000
