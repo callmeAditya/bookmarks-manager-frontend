@@ -3,10 +3,8 @@ import axios from "axios";
 const makeRequest = async(path, obj={}, options={}) => {
         
     const accessToken = sessionStorage.getItem("user");
-    if(accessToken && accessToken!==undefined) {      
-        console.log(sessionStorage);
-          
-        obj['header']['Authorization'] = `Bearer ${accessToken}`
+    if(accessToken && accessToken!==undefined) {                
+        obj['headers']['Authorization'] = `Bearer ${accessToken}`
     }
     console.log(obj);
     
@@ -29,10 +27,8 @@ const get = async(path, queryParams={}, body={}, header={}) => {
         method:'GET',
         params: queryParams,
         data:{...body},
-        header:{
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "Origin, X-Requested-With, Content-Type, Accept",
+        headers:{
+            "Accept": "application/json",
             ...header
         }
     }
@@ -48,10 +44,8 @@ const post = async(path, queryParams={}, body={}, headers={}) => {
         method:'POST',
         params: queryParams,
         data:{...body},
-        header:{
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "Origin, X-Requested-With, Content-Type, Accept",
+        headers:{
+            "Accept": "application/json",
             ...headers
         }
     }
@@ -67,10 +61,8 @@ const _delete = async(path, queryParams={}, body={}, headers={}) => {
         method:'DELETE',
         params: queryParams,
         data:{...body},
-        header:{
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "Origin, X-Requested-With, Content-Type, Accept",
+        headers:{
+            "Accept": "application/json",
             ...headers
         }
     }

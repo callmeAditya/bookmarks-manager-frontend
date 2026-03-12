@@ -32,11 +32,10 @@ const LoginPage = ()=>{
     useEffect(()=>{
         console.log(sessionStorage.getItem("user"));
         
-        if(!_.isEmpty(sessionStorage.getItem("user"))){
-            history("/home");
-        }else{
-            history("/login")
-        }
+        // if(!_.isEmpty(sessionStorage.getItem("user"))){
+        //     history("/home");
+        // }
+        
     },[sessionStorage.getItem("user")])
 
 
@@ -94,7 +93,7 @@ const LoginPage = ()=>{
             </Button>                
 
             <Box mt={3} display={"flex"} justifyContent={"space-between"} width={"100%"}>
-                <Link  href="/signup" underline="hover">
+                <Link href="/register" underline="hover">
                 {"New User? Sign up"}
                 </Link>
 

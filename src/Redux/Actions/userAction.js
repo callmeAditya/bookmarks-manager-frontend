@@ -15,7 +15,20 @@ const loginUser=(payload)=>{
     }
 
 }
+const registerUser=(payload)=>{
+    return dispatch=>{
+    UserService.registerUser(payload)
+    .then(res=>{        
+        
+    })
+    .catch(err=>{
+
+    })
+    }
+
+}
 
 export const userAction={
-    loginUser
+    loginUser,
+    registerUser
 }

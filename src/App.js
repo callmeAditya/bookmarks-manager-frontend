@@ -40,7 +40,6 @@ useEffect(()=>{
           {
             routes.map(({ component: Component, path})=>(
               <Route path={path} element={<Component />} />
-
             ))
           }
         </Routes>
